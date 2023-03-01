@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import DimsumList from "./components/DimsumList";
 import Featured from "./components/Featured";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>dimsum</title>
+        <title>dimsum | Le spécialiste des dimsum</title>
         <meta
           name="description"
           content="Meilleur restaurant de Dim Sum sur Paris"
@@ -19,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured/>
+      <DimsumList/>
     </>
   );
 }

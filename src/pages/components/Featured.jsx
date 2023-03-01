@@ -7,13 +7,13 @@ const Featured = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.textWrapper}>
-          <h1>dimsum le <br /> spécialiste des <br /> <span>dim sum</span></h1>
+          <h3>dimsum le <br /> spécialiste des <br /> <span>dim sum</span></h3>
           <p>
             dimsun propose des dim sum à déguster chez vous grâce à notre
             service de livraison.
           </p>
         </div>
-        <Image src="/img/hero_2.png" width="700" height="600" className={styles.img}/>
+        <Image src="/img/hero_2.png" width="705" height="605" className={styles.img}/>
       </div>
     </div>
   );
