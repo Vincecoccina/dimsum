@@ -1,0 +1,64 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 100%;
+  padding: 0 80px;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 4;
+  gap: 8px;
+}
+
+.logo h3 {
+  color: #D70F64;
+}
+
+.linksContainer{
+    flex: 2;
+}
+
+.linkList{
+    display: flex;
+    gap: 30px;
+}
+
+.link{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "EmberLight", sans-serif;
+    color: #D70F64;
+}
+
+.cartContainer{
+    position: relative;
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.counter{
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D70F64;
+    color: white;
+}

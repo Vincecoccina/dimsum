@@ -1,0 +1,43 @@
+.container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #fb61a1;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 1px;
+}
+
+.textWrapper{
+    margin-left: 100px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textWrapper h1{
+    font-size: 80px;
+    color: white;
+    z-index: 1000;
+}
+
+.textWrapper p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.textWrapper span{
+    color: #D70F64;
+}
+
+.img{
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  z-index: 999;
+}
