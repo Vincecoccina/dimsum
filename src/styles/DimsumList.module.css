@@ -12,6 +12,8 @@
     font-family: 'EmberLight', sans-serif;
     color: #D70F64;
     margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
 }
 
 .wrapper{
@@ -23,3 +25,12 @@
     gap: 10px;
     margin-top: 50px;
 }
+
+@media screen and (min-width: 550px) {
+    .title{
+        font-size: 30px;
+        text-align: inherit;
+    }
+   
+  }
+  

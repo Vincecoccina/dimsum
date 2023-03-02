@@ -39,6 +39,7 @@
     font-weight: 300;
     font-family: "EmberLight", sans-serif;
     color: #D70F64;
+    white-space: nowrap;
 }
 
 .cartContainer{

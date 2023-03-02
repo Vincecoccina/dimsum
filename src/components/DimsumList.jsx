@@ -1,6 +1,6 @@
 import React from 'react';
 import DimsumCard from './DimsumCard';
-import styles from "../../styles/DimsumList.module.css";
+import styles from "../styles/DimsumList.module.css";
 
 const DimsumList = () => {
   return (
