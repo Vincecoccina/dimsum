@@ -1,93 +1,178 @@
-.container{
-    padding: 50px;
-    display: flex;
+.container {
+  padding: 40px 5px;
+  display: flex;
+  flex-direction: column;
 }
 
-.left{
-    flex: 2;
+.left {
+  flex: 2;
 }
 
-.table{
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.trTitle {
+  display: none;
+}
+
+.tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.id::before {
+  content: "ID : ";
+  font-weight: 800;
+}
+
+.name::before {
+  content: " Nom : ";
+  font-weight: 800;
+}
+
+.adress::before {
+  content: "Adresse : ";
+  font-weight: 800;
+}
+
+.total::before {
+  content: "Total : ";
+  font-weight: 800;
+}
+
+.row{
     width: 100%;
-    text-align: left;
-    margin-bottom: 50px;
+    margin: 10px auto;
 }
 
-.row:last-child{
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+.textRow{
+font-size: 10px;
 }
 
-.done{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.row:last-child {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.inProgress{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: inProgress 1s infinite alternate;
+.checkIcon{
+    width: 15px;
+    height: 15px;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s infinite alternate;
 }
 
 @keyframes inProgress {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.unDone{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0.3;
+.unDone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
 }
 
-.unDone .checkIcon, .inProgress .checkIcon{
-    display: none;
+.unDone .checkIcon,
+.inProgress .checkIcon {
+  display: none;
 }
 
-.right{
-    flex: 1;
+.right {
+  flex: 1;
 }
 
+.wrapper {
+  width: 100%;
+  max-height: 300px;
+  background-color: #333;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
 
-.wrapper{
-    width:90%;
-    max-height: 300px;
-    background-color: #333;
+.title {
+  margin-bottom: 20px;
+}
+
+.totalText {
+  margin-bottom: 10px;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.btn {
+  height: 40px;
+  background-color: #d70f64;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 740px) {
+  .container {
     padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-}
+    flex-direction: row;
+  }
 
-.title{
-    margin-bottom: 20px;
-}
+  .wrapper {
+    width: 90%;
+  }
 
-.totalText{
-    margin-bottom: 10px;
-}
+  .trTitle {
+    display: table-row;
+  }
 
-.totalTextTitle{
-    margin-right: 10px;
-}
+  .tr {
+    display: table-row;
+  }
 
-.btn{
-    height: 40px;
-    background-color: #D70F64;
-    margin-top: 20px;
-    border: none;
-    outline: none;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: not-allowed;
+  .id::before {
+    content: "";
+  }
+  
+  .name::before {
+    content: "";
+  }
+  
+  .adress::before {
+    content: "";
+  }
+  
+  .total::before {
+    content: "";
+  }
+
+  .row{
+    margin: 0;
+}
 }

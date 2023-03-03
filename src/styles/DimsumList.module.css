@@ -1,36 +1,34 @@
-.container{
-    width: 100%;
-    padding: 20px 10px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container {
+  width: 100%;
+  padding: 20px 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title{
-    font-family: 'EmberLight', sans-serif;
-    color: #D70F64;
-    margin-top: 50px;
-    font-size: 20px;
-    text-align: center;
+.title {
+  font-family: "EmberLight", sans-serif;
+  color: #d70f64;
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
 }
 
-.wrapper{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 50px;
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
 }
 
 @media screen and (min-width: 550px) {
-    .title{
-        font-size: 30px;
-        text-align: inherit;
-    }
-   
+  .title {
+    font-size: 30px;
+    text-align: inherit;
   }
-  
+}

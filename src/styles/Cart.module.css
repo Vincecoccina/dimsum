@@ -1,87 +1,140 @@
-.container{
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.imgContainer {
+  width: 100%;
+  height: 100px;
+}
+
+.table {
+  width: 100%;
+  
+  border-spacing: 20px;
+}
+
+.name {
+  color: #595959;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.trTitle {
+  display: none;
+}
+
+.tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: #595959;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.price::before {
+  content: "Prix : ";
+  font-weight: bold;
+}
+
+.quantity {
+  color: #595959;
+  font-weight: 200;
+}
+
+.quantity::before {
+  content: "Qty : ";
+  font-weight: bold;
+}
+
+.total {
+  color: #d70f64;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.total::before {
+  content: "Total : ";
+}
+
+.wrapper {
+  width: 100%;
+  max-height: 300px;
+  background-color: #333;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.totalText {
+  margin-bottom: 10px;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.btn {
+  height: 40px;
+  background-color: #d70f64;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
     padding: 50px;
-    display: flex;
-}
+    flex-direction: row;
+  }
 
-.left{
-    flex: 2;
-    
-}
+  .wrapper {
+    width: 90%;
+  }
 
-.right{
-    flex: 1;
-}
+  .trTitle {
+    display: table-row;
+  }
 
-.imgContainer{
-    width: 100%;
-    height: 100px;
-}
+  .tr {
+    display: table-row;
+  }
 
-.table{
-    width: 100%;
-    border-spacing: 20px;
-}
+  .price::before {
+    content: "";
+  }
 
-.name{
-    color: #595959;
-    font-weight: 500;
-    text-transform: capitalize;
-}
+  .total::before {
+    content: "";
+  }
 
-.tr th{
-    text-align: center;
-}
-
-.tr td{
-    text-align: center;
-}
-
-.price{
-    color: #595959;
-    font-weight: 500;
-}
-
-.quantity{
-    color: #595959;
-    font-weight: 200;
-}
-
-.total{
-    color: #D70F64;
-    font-weight: 700;
-}
-
-.wrapper{
-    width:90%;
-    max-height: 300px;
-    background-color: #333;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-}
-
-.title{
-    margin-bottom: 20px;
-}
-
-.totalText{
-    margin-bottom: 10px;
-}
-
-.totalTextTitle{
-    margin-right: 10px;
-}
-
-.btn{
-    height: 40px;
-    background-color: #D70F64;
-    margin-top: 20px;
-    border: none;
-    outline: none;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    cursor: pointer;
+  .quantity::before {
+    content: "";
+  }
 }

@@ -8,11 +8,11 @@ const Cart = () => {
       <div className={styles.left}>
         <table className={styles.table}>
           <thead>
-            <tr className={styles.tr}>
+            <tr className={styles.trTitle}>
               <th>Produit</th>
               <th>Nom</th>
               <th>Prix</th>
-              <th>Quantité</th>
+              <th>Qty</th>
               <th>Total</th>
             </tr>
           </thead>
