@@ -1,4 +1,5 @@
 import Head from "next/head";
+import axios from "axios";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -7,7 +8,7 @@ import Featured from "../components/Featured";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({dimsumList}) {
   return (
     <>
       <Head>
@@ -20,7 +21,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured/>
-      <DimsumList/>
+      <DimsumList dimsumList={dimsumList}/>
     </>
   );
+}
+
+export const getServerSideProps = async() => {
+  const res = await axios.get('http://localhost:3000/api/products');
+  return {
+    props:{
+      dimsumList: res.data
+    }
+  }
+
 }

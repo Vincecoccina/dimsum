@@ -13,7 +13,7 @@ const Featured = () => {
             service de livraison.
           </p>
         </div>
-        <Image src="/img/hero_2.png" width="705" height="605" className={styles.img}/>
+        <Image alt="Dimsum cartoon" src="/img/hero_2.png" width="705" height="605" className={styles.img}/>
       </div>
     </div>
   );

@@ -1,20 +1,18 @@
-import React from 'react';
-import DimsumCard from './DimsumCard';
+import React from "react";
+import DimsumCard from "./DimsumCard";
 import styles from "../styles/DimsumList.module.css";
 
-const DimsumList = () => {
+const DimsumList = ({ dimsumList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Choisissez, commandez et dégustez</h1>
       <div className={styles.wrapper}>
-        <DimsumCard/>
-        <DimsumCard/>
-        <DimsumCard/>
-        <DimsumCard/>
-        <DimsumCard/>
+        {dimsumList.map((item) => (
+          <DimsumCard key={item._id} dimsum={item} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DimsumList
+export default DimsumList;
