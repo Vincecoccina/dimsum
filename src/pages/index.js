@@ -33,5 +33,4 @@ export const getServerSideProps = async() => {
       dimsumList: res.data
     }
   }
-
 }

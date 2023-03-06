@@ -10,10 +10,11 @@ import {
   PayPalButtons,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
+import OrderDetails from "@/components/OrderDetails";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  const [open, setOpen] = useState(false);
+  const [cash, setCash] = useState(false);
   const amount = cart.total;
   const currency = "EUR";
   const style = { layout: "vertical" };
@@ -148,31 +149,31 @@ const Cart = () => {
             <b className={styles.totalTextTitle}>Total:</b>
             {cart.total.toFixed(2)}€
           </div>
-
-          {open ? (
-            <div style={{ maxWidth: "750px" }}>
-              <button className={styles.cashBtn}>Payer à la livraison</button>
-              <PayPalScriptProvider
-                options={{
-                  "client-id":
-                    "AdspCSJAxEus387evkn4oBHcutC6WuhvEtfJdRWdQk5f_GZOzxMkXza4dRSE1M2rpo383xlpkpm2tuP6",
-                  components: "buttons",
-                  currency: "USD",
-                  "disable-funding": "credit,card,p24",
-                }}
-              >
-                <ButtonWrapper currency={currency} showSpinner={false} />
-              </PayPalScriptProvider>
-            </div>
-          ) : (
-            <div className={styles.btnWrapper} style={{ maxWidth: "750px" }}>
-              <button className={styles.btn} onClick={() => setOpen(true)}>
-                Valider mon panier
-              </button>
-            </div>
-          )}
+          <div style={{ maxWidth: "750px" }}>
+            <button className={styles.cashBtn} onClick={() => setCash(true)}>
+              Payer à la livraison
+            </button>
+            <PayPalScriptProvider
+              options={{
+                "client-id":
+                  "AdspCSJAxEus387evkn4oBHcutC6WuhvEtfJdRWdQk5f_GZOzxMkXza4dRSE1M2rpo383xlpkpm2tuP6",
+                components: "buttons",
+                currency: "USD",
+                "disable-funding": "credit,card,p24",
+              }}
+            >
+              <ButtonWrapper currency={currency} showSpinner={false} />
+            </PayPalScriptProvider>
+          </div>
         </div>
       </div>
+      {cash && (
+        <OrderDetails
+          total={cart.total}
+          createOrder={createOrder}
+          closeModal={() => setCash(false)}
+        />
+      )}
     </div>
   );
 };

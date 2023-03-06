@@ -128,11 +128,11 @@ font-size: 10px;
 
 .btn {
   height: 40px;
-  background-color: #d70f64;
+  background-color: #1c1c1c;
   margin-top: 20px;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(113, 113, 113);
   font-weight: 700;
   text-transform: uppercase;
   cursor: not-allowed;
