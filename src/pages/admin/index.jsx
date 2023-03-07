@@ -13,7 +13,7 @@ const index = ({ products, orders }) => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/products/${id}`
+        `https://api/products/${id}`
       );
       setDimsumList(dimsumList.filter((item) => item._id !== id));
     } catch (error) {
@@ -124,8 +124,8 @@ export const getServerSideProps = async (ctx) => {
         }
     }
   }
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const ordersRes = await axios.get("http://localhost:3000/api/order");
+  const productRes = await axios.get("https://api/products");
+  const ordersRes = await axios.get("https://api/order");
 
   return {
     props: {
