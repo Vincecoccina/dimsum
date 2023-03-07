@@ -93,8 +93,7 @@ const Product = ({ dimsum }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(
-    `/api/products/${params.id}`
+  const res = await axios.get(`https://project-dimsum.vercel.app/api/products/${params.id}`
   );
   return {
     props: {

@@ -12,8 +12,7 @@ const index = ({ products, orders }) => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(
-        `/api/products/${id}`
+      const res = await axios.delete(`https://project-dimsum.vercel.app/api/products/${id}`
       );
       setDimsumList(dimsumList.filter((item) => item._id !== id));
     } catch (error) {
@@ -25,7 +24,7 @@ const index = ({ products, orders }) => {
     const item = orderList.filter((order) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put(`https://api/order/${id}`, {
+      const res = await axios.put(`https://project-dimsum.vercel.app/order/${id}`, {
         status: currentStatus + 1,
       });
       setOrderList([
@@ -124,8 +123,8 @@ export const getServerSideProps = async (ctx) => {
         }
     }
   }
-  const productRes = await axios.get("https://api/products");
-  const ordersRes = await axios.get("https://api/order");
+  const productRes = await axios.get("https://project-dimsum.vercel.appapi/products");
+  const ordersRes = await axios.get("https://project-dimsum.vercel.app/api/order");
 
   return {
     props: {
