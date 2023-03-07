@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  height: 200px;
+  padding: 30px;
+  border-bottom: 1px solid rgb(203, 203, 203);
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-family: "EmberLight", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #d70f64;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  margin-top: 50px;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(67, 67, 67);
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        padding: 50px;
+        height: 300px;
+      }
+      
+  .wrapper {
+    width: 60%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subTitle {
+    margin-top: 50px;
+    font-size: 17px;
+  }
+}

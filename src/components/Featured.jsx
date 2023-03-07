@@ -7,8 +7,8 @@ const Featured = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.textWrapper}>
-          <h3>dimsum le spécialiste des  <span>dim sum</span></h3>
-          <p>
+          <p className={styles.title}><span> C'est facile !</span> <br /> Choisissez, commandez et dégustez.</p>
+          <p className={styles.subTitle}>
             dimsun propose des dim sum à déguster chez vous grâce à notre
             service de livraison.
           </p>

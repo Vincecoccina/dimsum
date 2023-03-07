@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid rgb(203, 203, 203);
+    background-color: #fde4ef;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -19,7 +20,9 @@
 }
 
 .productName{
-    font-size: 18px;
+    font-size: 15px;
+    white-space: nowrap;
+    margin-bottom: 10px;
     font-weight: 400;
     color: #484848;
 }

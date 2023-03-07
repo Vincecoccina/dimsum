@@ -12,14 +12,7 @@ const Navbar = () => {
           <Image alt="logo dimsum" src="/img/logo.png" width="25" height="25" />
           <h3>dimsum</h3>
       </Link>
-      <div className={styles.linksContainer}>
-        <ul className={styles.linkList}>
-          <li className={styles.link}>Nos Produits</li>
-          <li className={styles.link}>Menu</li>
-          <li className={styles.link}>Events</li>
-          <li className={styles.link}>Blog</li>
-        </ul>
-      </div>
+      
       <Link href="/cart">
         <div className={styles.cartContainer}>
           <div className={styles.cart}>

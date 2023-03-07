@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import styles from "../../styles/Admin.module.css";
 import Image from "next/image";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 const index = ({ products, orders }) => {
   const [dimsumList, setDimsumList] = useState(products);
   const [orderList, setOrderList] = useState(orders);
   const status = ["En cuisine", "Le Livreur est en route", "Livré"];
+
 
   const handleDelete = async (id) => {
     try {
@@ -28,8 +30,8 @@ const index = ({ products, orders }) => {
       });
       setOrderList([
         res.data,
-        ...orderList.filter((order) => order._id !== id)
-      ])
+        ...orderList.filter((order) => order._id !== id),
+      ]);
     } catch (error) {
       console.log(error);
     }
@@ -112,7 +114,16 @@ const index = ({ products, orders }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
+  const myCookie = ctx.req?.cookies || "";
+  if(myCookie.token !== process.env.TOKEN){
+    return {
+        redirect:{
+            destination: "/admin/login",
+            permanent: false,
+        }
+    }
+  }
   const productRes = await axios.get("http://localhost:3000/api/products");
   const ordersRes = await axios.get("http://localhost:3000/api/order");
 
