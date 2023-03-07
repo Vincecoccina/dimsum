@@ -13,7 +13,7 @@ const index = ({ products, orders }) => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        `https://api/products/${id}`
+        `/api/products/${id}`
       );
       setDimsumList(dimsumList.filter((item) => item._id !== id));
     } catch (error) {
