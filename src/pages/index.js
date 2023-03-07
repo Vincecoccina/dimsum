@@ -42,7 +42,7 @@ export const getServerSideProps = async (ctx) => {
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
   }
-  const res = await axios.get("/api/products");
+  const res = await axios.get("https://project-dimsum.vercel.app/api/products");
   return {
     props: {
       dimsumList: res.data,
