@@ -25,7 +25,7 @@ const index = ({ products, orders }) => {
     const item = orderList.filter((order) => order._id === id)[0];
     const currentStatus = item.status;
     try {
-      const res = await axios.put(`http://localhost:3000/api/order/${id}`, {
+      const res = await axios.put(`https://api/order/${id}`, {
         status: currentStatus + 1,
       });
       setOrderList([
