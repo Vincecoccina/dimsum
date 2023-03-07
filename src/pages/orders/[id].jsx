@@ -124,7 +124,7 @@ const Order = ({order}) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`https://api/order/${params.id}`);
+  const res = await axios.get(`/api/order/${params.id}`);
   return {
     props: {
       order: res.data,

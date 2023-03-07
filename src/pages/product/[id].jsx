@@ -94,7 +94,7 @@ const Product = ({ dimsum }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `https://api/products/${params.id}`
+    `/api/products/${params.id}`
   );
   return {
     props: {
